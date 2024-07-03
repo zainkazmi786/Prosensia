@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class=" flex h-screen">
+    <div id="side-panel-container" class="w-1/5">
+        <div class=" sidepanel w-full bg-gray-800 h-full flex flex-col justify-center">
+            <div class="w-full py-4 h-1/6 flex justify-center items-center overflow-hidden">
+                <img src="/assets/logo.png" alt="Logo" class="h-full w-full mx-auto object-cover">
+            </div>
+        
+            <div class=" text-white flex flex-col gap-1w-14 justify-evenly h-5/6">
+                <ul class="w-full mt-6 flex flex-col gap-2">
+                    <li class="w-full px-14 hover:bg-gray-600  flex gap-4 " data-target="profile-view" data-class="hidden">
+                        <img src="/assets/profile.svg" alt="">
+                        <a href="index.html" class="block py-2 ">Profile</a>
+                    </li>
+                   
+                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4"><img src="/assets/courses.svg"
+                            alt=""><a href="Courses.html" class="block py-2">Courses</a></li>
+                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4 toggle-button"><img src="/assets/dashboard.svg" alt=""><a
+                            href="#dashboard" class="block py-2">Dashboard</a></li>
+                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4 toggle-button"><img src="/assets/settings.svg" alt=""><a
+                            href="#settings" class="block py-2">Settings</a></li>
+                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4 toggle-button"><img src="/assets/notifi.svg" alt=""><a
+                            href="#notifications" class="block py-2">Notifications</a>
+                    </li>
+                </ul>
+                <ul class="text-white">
+                    <li class="w-full px-14 hover:bg-gray-600"><a href="#help" class="block py-2 ">Help</a></li>
+                    <li class="w-full px-14 hover:bg-gray-600"><a href="#logout" class="block py-2 ">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-4/5 h-full overflow-auto flex flex-col items-center gap-10 relative">
+        <div class="herotoppane h-1/6 w-full bg-yellow-400 text-gray-800 flex-shrink-0 flex items-center p-4 sticky top-0">
+            <div class="font-bold text-3xl text-gray-600 ml-10">Welcome To ProSensia</div>
+        </div>
+        <div class="w-11/12 h-5/6 border-2 flex flex-col">
+            <div  class="opencourses flex flex-col justify-evenly shadow-lg gap-10 min-h-1/2 py-10 px-10">
+                <div class="text-3xl flex justify-between">
+                    <div>My Courses</div>
+                    <div><img src="/assets/add.svg" alt=""></div>
+                </div>
+                <div class="w-full grid grid-cols-5 gap-10">
+                    <!-- Example of a course card -->
+                    <div class=" card w-52 h-52  bg-white rounded-lg shadow-lg shadow-gray-700 flex flex-col items-center justify-evenly relative">
+                        <div class="h-3/4 p-3 flex flex-col gap-5 bg-[url('/assets/c1.png')] rounded-t-lg relative">
+                            <div class="absolute w-full h-full bg-black opacity-40 top-0 left-0 rounded-t-md z-10"></div>
+                            <div class="relative z-20 text-sm font-bold text-gray-400">Prosensia's Crash course</div>
+                            <div class="relative z-20 text-2xl font-bold font-mono text-white">Front-End Development</div>
+                        </div>
+                        
+                        <div class="h-1/4 flex justify-between w-11/12">
+                            <div class="flex flex-col justify-center items-center">
+                                <div class="text-xl font-semibold">13</div>
+                                <div class="text-sm">Chapters</div>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <div class="text-xl font-semibold">149</div>
+                                <div class="text-sm">Items</div>
+                            </div>
+                            <div class="percentage text-2xl font-bold mt-4">50%</div>
+                            
+                        </div>
+                        <div class="play absolute h-12 w-12 rounded-full flex justify-center items-center bg-black border-2 border-gray-800 z-20 right-2 top-32">
+                            <div><img src="/assets/play.svg" alt=""></div>
+                        </div>
+                    </div>                    
+                  
+                                     
+                </div>
+            </div>
+            <div  class="lockedcourses flex flex-col justify-evenly shadow-lg gap-10 min-h-1/2 py-10 px-10">
+                <div class="text-3xl flex justify-between">
+                    <div>Locked Courses</div>
+                    <div><img src="/assets/lock.svg" alt=""></div>
+                </div>
+                <div class="w-full grid grid-cols-5 gap-10">
+                    <!-- Example of a course card -->
+                    <div class=" card w-52 h-52  bg-white rounded-lg shadow-lg shadow-gray-700 flex flex-col items-center justify-evenly relative">
+                        <div class="h-3/4 p-3 flex flex-col gap-5 bg-[url('/assets/c1.png')] rounded-t-lg relative">
+                            <div class="absolute w-full h-full bg-black opacity-40 top-0 left-0 rounded-t-md z-10"></div>
+                            <div class="relative z-20 text-sm font-bold text-gray-400">Prosensia's Crash course</div>
+                            <div class="relative z-20 text-2xl font-bold font-mono text-white">Front-End Development</div>
+                        </div>
+                        
+                        <div class="h-1/4 flex justify-between w-11/12">
+                            <div class="flex flex-col justify-center items-center">
+                                <div class="text-xl font-semibold">13</div>
+                                <div class="text-sm">Chapters</div>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <div class="text-xl font-semibold">149</div>
+                                <div class="text-sm">Items</div>
+                            </div>
+                            <div class="percentage text-2xl font-bold mt-4">50%</div>
+                            
+                        </div>
+                        <div class="play absolute h-12 w-12 rounded-full flex justify-center items-center bg-black border-2 border-gray-800 z-20 right-2 top-32">
+                            <div><img src="/assets/play.svg" alt=""></div>
+                        </div>
+                    </div>                    
+                    
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    
+        <script src="script.js"></script>
+</body>
+</html>
