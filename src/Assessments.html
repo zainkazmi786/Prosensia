@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class=" flex h-screen">
+    <div id="side-panel-container" class="w-1/5">
+        <div class="sidepanel w-full bg-gray-800 h-full flex flex-col justify-center">
+            <div class="w-full py-4 h-1/6 flex justify-center items-center overflow-hidden">
+                <img src="/assets/logo.png" alt="Logo" class="h-full w-full mx-auto object-cover">
+            </div>
+
+            <div class="text-white flex flex-col gap-1w-14 justify-evenly h-5/6">
+                <ul class="w-full mt-6 flex flex-col gap-2">
+                    <li class="w-full px-14 hover:bg-gray-600  flex gap-4" data-target="profile-view" data-class="hidden">
+                        <img src="/assets/profile.svg" alt="">
+                        <a href="index.html" class="block py-2">Profile</a>
+                    </li>
+
+                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4"><img src="/assets/courses.svg" alt=""><a href="Courses.html" class="block py-2">Courses</a></li>
+                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4 toggle-button"><img src="/assets/assessment.svg" alt=""><a href="Assessments.html" class="block py-2">Assessments</a></li>
+                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4 toggle-button"><img src="/assets/dashboard.svg" alt=""><a href="#dashboard" class="block py-2">Dashboard</a></li>
+                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4 toggle-button"><img src="/assets/settings.svg" alt=""><a href="#settings" class="block py-2">Settings</a></li>
+                </ul>
+                <ul class="text-white">
+                    <li class="w-full px-14 hover:bg-gray-600"><a href="#help" class="block py-2">Help</a></li>
+                    <li class="w-full px-14 hover:bg-gray-600"><a href="#logout" class="block py-2">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-4/5 h-full overflow-auto flex flex-col items-center gap-10 relative">
+        <div class="herotoppane h-1/6 w-full bg-yellow-400 text-gray-800 flex-shrink-0 flex items-center p-4 sticky top-0 z-30">
+            <div class="flex gap-2">
+                <button class="w-10 h-10 border-2 rounded-full bg-white flex items-center justify-center"><img src="/assets/back.svg" alt=""></button>
+                <button class="w-10 h-10 border-2 rounded-full bg-white flex items-center justify-center rotate-180"><img src="/assets/back.svg" alt=""></button>
+            </div>
+            <div class="font-bold text-3xl text-gray-600 ml-10">Welcome To ProSensia</div>
+        </div>
+        <div class="w-11/12 min-h-5/6 border-2 flex flex-col p-4">
+            <!-- Day 1 Tasks -->
+            <h2 class="text-4xl font-bold mb-4">Day 1</h2>
+            <div class="bg-white rounded-lg shadow-md p-6 mb-4 hover:shadow-xl shadow-gray-500 hover:shadow-gray-900 transition-shadow duration-300 border-2">
+                <h3 class="text-2xl font-semibold mb-2">Task 2: Introduction to CSS</h3>
+                <p class="text-gray-600 mb-4 text-xl">This task covers the basics of CSS structure, classes, and attributes.</p>
+                <div class="flex justify-between items-center mb-4">
+                    <div>
+                        <span class="text-lg font-medium text-gray-800">Rating:</span>
+                        <span class="text-lg text-green-500 font-semibold">0.5/5</span>
+                    </div>
+                    <div>
+                        <img src="/assets/check.svg" alt="Rating" class="w-14 h-14">
+                    </div>
+                </div>
+                <div class="text-gray-600 text-lg font-medium">
+                    Checked By: <span class="text-gray-800 font-semibold">John Doe</span>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md p-6 mb-4 hover:shadow-xl shadow-gray-500 hover:shadow-gray-900 transition-shadow duration-300 border-2">
+                <h3 class="text-2xl font-semibold mb-2">Task 2: Introduction to CSS</h3>
+                <p class="text-gray-600 mb-4 text-xl">This task covers the basics of CSS structure, classes, and attributes.</p>
+                <div class="flex justify-between items-center mb-4">
+                    <div>
+                        <span class="text-lg font-medium text-gray-800">Rating:</span>
+                        <span class="text-lg text-red-500 font-semibold">0.5/5</span>
+                    </div>
+                    <div>
+                        <img src="/assets/cross.svg" alt="Rating" class="w-14 h-14">
+                    </div>
+                </div>
+                <div class="text-gray-600 text-lg font-medium">
+                    Checked By: <span class="text-gray-800 font-semibold">John Doe</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 mb-4 hover:shadow-xl shadow-gray-500 hover:shadow-gray-900 transition-shadow duration-300 border-2">
+                <h3 class="text-2xl font-semibold mb-2">Task 2: Introduction to CSS</h3>
+                <p class="text-gray-600 mb-4 text-xl">This task covers the basics of CSS structure, classes, and attributes.</p>
+                <div class="flex justify-between items-center mb-4">
+                    <div>
+                        <span class="text-lg font-medium text-gray-800">Rating:</span>
+                        <span class="text-lg text-black-500 font-semibold">0/5</span>
+                    </div>
+                    <div>
+                        <img src="/assets/exlamation.svg" alt="Rating" class="w-14 h-14">
+                    </div>
+                </div>
+                <div class="text-gray-600 text-lg font-medium">
+                    Checked By: <span class="text-gray-800 font-semibold">John Doe</span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+
+</html>

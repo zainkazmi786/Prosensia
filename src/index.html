@@ -13,23 +13,24 @@
             <div class="w-full py-4 h-1/6 flex justify-center items-center overflow-hidden">
                 <img src="/assets/logo.png" alt="Logo" class="h-full w-full mx-auto object-cover">
             </div>
-        
+
             <div class=" text-white flex flex-col gap-1w-14 justify-evenly h-5/6">
                 <ul class="w-full mt-6 flex flex-col gap-2">
-                    <li class="w-full px-14 hover:bg-gray-600  flex gap-4 " data-target="profile-view" data-class="hidden">
+                    <li class="w-full px-14 hover:bg-gray-600  flex gap-4 " data-target="profile-view"
+                        data-class="hidden">
                         <img src="/assets/profile.svg" alt="">
                         <a href="index.html" class="block py-2 ">Profile</a>
                     </li>
-                   
-                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4"><img src="/assets/courses.svg"
-                            alt=""><a href="Courses.html" class="block py-2">Courses</a></li>
-                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4 toggle-button"><img src="/assets/dashboard.svg" alt=""><a
-                            href="#dashboard" class="block py-2">Dashboard</a></li>
-                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4 toggle-button"><img src="/assets/settings.svg" alt=""><a
-                            href="#settings" class="block py-2">Settings</a></li>
-                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4 toggle-button"><img src="/assets/notifi.svg" alt=""><a
-                            href="#notifications" class="block py-2">Notifications</a>
+
+                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4"><img src="/assets/courses.svg" alt=""><a
+                            href="Courses.html" class="block py-2">Courses</a></li>
+                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4 toggle-button"><img src="/assets/assessment.svg"
+                            alt=""><a href="Assessments.html" class="block py-2">Assessments</a>
                     </li>
+                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4 toggle-button"><img src="/assets/dashboard.svg"
+                            alt=""><a href="#dashboard" class="block py-2">Dashboard</a></li>
+                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4 toggle-button"><img src="/assets/settings.svg"
+                            alt=""><a href="#settings" class="block py-2">Settings</a></li>
                 </ul>
                 <ul class="text-white">
                     <li class="w-full px-14 hover:bg-gray-600"><a href="#help" class="block py-2 ">Help</a></li>
@@ -40,22 +41,34 @@
     </div>
 
     <div class="w-4/5 max-h-full overflow-auto flex flex-col items-center gap-10">
-        <div class="herotoppane h-1/6 w-full bg-yellow-400 text-gray-800 flex-shrink-0 flex items-center p-4">
+        <div
+            class="herotoppane h-1/6 w-full bg-yellow-400 text-gray-800 flex-shrink-0 flex items-center p-4 sticky top-0 z-30">
+            <div class="flex gap-2">
+                <button class="w-10 h-10 border-2 rounded-full bg-white flex items-center justify-center"><img
+                        src="/assets/back.svg" alt=""></button>
+                <button
+                    class="w-10 h-10 border-2 rounded-full bg-white flex items-center justify-center rotate-180"><img
+                        src="/assets/back.svg" alt=""></button>
+            </div>
             <div class="font-bold text-3xl text-gray-600 ml-10">Welcome To ProSensia</div>
         </div>
-        
+
         <div id="profile-view"
             class="hero-section bg-white p-6 rounded-lg shadow-gray-800 shadow-md w-11/12 flex flex-col gap-16 justify-center items-center">
             <div class="flex justify-between w-full">
                 <div class="text-2xl text-gray-800 font-bold ">Profile Information</div>
-                <a href="addprofile.html"><button class="h-10 w-20 bg-gray-700 rounded-2xl text-white font-bold text-center mr-0 " data-target="profile-form" data-class="hidden">EDIT</button></a>
-                
+                <a href="addprofile.html"><button
+                        class="h-10 w-20 bg-gray-700 rounded-2xl text-white font-bold text-center mr-0 "
+                        data-target="profile-form" data-class="hidden">EDIT</button></a>
+
             </div>
             <div class="flex justify-between w-full">
 
                 <div class="about flex flex-col gap-7 w-2/3">
                     <div class="text-4xl font-bold">Zain Kazmi</div>
-                    <p class="description text-lg">Hi! I am Zain an enthusiast thriving to work and dive in the ocean of endless opportunities. My nature always compels me to achieve milestones which keeps me to the path of success
+                    <p class="description text-lg">Hi! I am Zain an enthusiast thriving to work and dive in the ocean of
+                        endless opportunities. My nature always compels me to achieve milestones which keeps me to the
+                        path of success
                     </p>
                 </div>
                 <div class="image  flex justify-center items-center overflow-hidden  border-2 rounded-full h-44 w-44">
