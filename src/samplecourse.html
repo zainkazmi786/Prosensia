@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class=" flex h-screen">
+    <div id="side-panel-container" class="w-1/5">
+        <div class=" sidepanel w-full bg-gray-800 h-full flex flex-col justify-center">
+            <div class="w-full py-4 h-1/6 flex justify-center items-center overflow-hidden">
+                <img src="/assets/logo.png" alt="Logo" class="h-full w-full mx-auto object-cover">
+            </div>
+
+            <div class=" text-white flex flex-col gap-1w-14 justify-evenly h-5/6">
+                <ul class="w-full mt-6 flex flex-col gap-2">
+                    <li class="w-full px-14 hover:bg-gray-600  flex gap-4 " data-target="profile-view"
+                        data-class="hidden">
+                        <img src="/assets/profile.svg" alt="">
+                        <a href="index.html" class="block py-2 ">Profile</a>
+                    </li>
+
+                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4"><img src="/assets/courses.svg" alt=""><a
+                            href="Courses.html" class="block py-2">Courses</a></li>
+                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4 toggle-button"><img src="/assets/dashboard.svg"
+                            alt=""><a href="#dashboard" class="block py-2">Dashboard</a></li>
+                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4 toggle-button"><img src="/assets/settings.svg"
+                            alt=""><a href="#settings" class="block py-2">Settings</a></li>
+                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4 toggle-button"><img src="/assets/notifi.svg"
+                            alt=""><a href="#notifications" class="block py-2">Notifications</a>
+                    </li>
+                </ul>
+                <ul class="text-white">
+                    <li class="w-full px-14 hover:bg-gray-600"><a href="#help" class="block py-2 ">Help</a></li>
+                    <li class="w-full px-14 hover:bg-gray-600"><a href="#logout" class="block py-2 ">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-4/5 h-full overflow-auto flex flex-col items-center gap-10 relative">
+        <div
+            class="herotoppane h-1/6 w-full bg-yellow-400 text-gray-800 flex-shrink-0 flex items-center p-4 sticky top-0 z-30">
+            <div class="font-bold text-3xl text-gray-600 ml-10">Welcome To ProSensia</div>
+        </div>
+        <div class="w-11/12 h-5/6  shadow-lg flex flex-col">
+            <table class="w-full text-left border-collapse mt-4">
+                <thead class="">
+                    <tr class="bg-gray-200">
+                        <th class="px-6 py-4 text-4xl font-bold">Day</th>
+                        <th class="px-6 py-4 text-4xl font-bold text-end">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b border-gray-300 hover:bg-gray-100 transition-colors duration-300">
+                        <td class="px-6 py-4 text-3xl"><a href="day1.html" class="text-blue-500 hover:underline">Day 1 - Introduction to HTML</a></td>
+                        <td class="px-6 py-4 flex items-center justify-between text-xl w-1/2">
+                            <p>Completed</p>
+                            <img src="/assets/check.svg" alt="Completed" class="ml-2 w-6 h-6">
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-300 hover:bg-gray-100 transition-colors duration-300">
+                        <td class="px-6 py-4 text-3xl"><a href="day1.html" class="text-blue-500 hover:underline">Day 2 - Introduction to CSS</a></td>
+                        <td class="px-6 py-4 flex items-center justify-between text-xl w-1/2">
+                            <p>Pending</p>
+                            <img src="/assets/wait.svg" alt="Completed" class="ml-2 w-6 h-6">
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-300 hover:bg-gray-100 transition-colors duration-300">
+                        <td class="px-6 py-4 text-3xl"><a href="day1.html" class="text-blue-500 hover:underline">Day 3 - Introduction to JS</a></td>
+                        <td class="px-6 py-4 flex items-center justify-between text-xl w-1/2">
+                            <p>Locked</p>
+                            <img src="/assets/lock.svg" alt="Completed" class="ml-2 w-6 h-6">
+                        </td>
+                    </tr>
+                 </tbody>
+            </table>
+        </div>
+        
+    </div>
+</body>
+</html>
