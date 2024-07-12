@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const currentButton = document.querySelector(`a[href="${currentPage}"]`);
                 console.log(currentButton)
                 if (currentButton) {
-                    currentButton.style.color = "yellow";
+                    currentButton.style.color = "#fcb603";
                     currentButton.style.fontSize = "larger";
                     
                     // Show the corresponding section

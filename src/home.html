@@ -1,0 +1,967 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProSensia - SkillBot</title>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./startups.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        #menu-toggle:checked+#menu {
+            display: block;
+            background: rgb(53, 61, 68);
+        }
+
+        .swiper-wrapper {
+            width: 100%;
+            height: max-content !important;
+            padding-bottom: 64px !important;
+            -webkit-transition-timing-function: linear !important;
+            transition-timing-function: linear !important;
+            position: relative;
+        }
+
+        .swiper-pagination-bullet {
+            background: #4f46e5;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-950 relative flex flex-col">
+    <nav
+        class="w-screen sticky m-0 top-0 r-0 left-0 lg:px-16 px-3 bg-gradient-to-b from-30% from-slate-900 to-slate-700 shadow-lg flex flex-wrap items-center lg:py-0 py-1 h-20 shadow-slate-900 z-50">
+        <div class="flex-1 flex justify-between items-center h-full">
+            <a href="/" class="flex text-lg font-semibold h-full ">
+                <img src="/assets/logo.png" class="p-2 w-72 object-cover" alt=" Logo" />
+
+            </a>
+        </div>
+        <label for="menu-toggle" class="cursor-pointer lg:hidden block">
+            <svg class="fill-current text-yellow-300" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                viewBox="0 0 20 20">
+                <title>menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+        </label>
+        <input class="hidden" type="checkbox" id="menu-toggle" />
+        <div class="hidden lg:flex lg:items-center lg:w-auto w-screen " id="menu">
+            <nav>
+                <ul class="text-xl text-center items-center gap-x-5 pt-4 md:gap-x-5 lg:text-lg lg:flex  lg:pt-0">
+                    <li class="py-2 lg:py-0 ">
+                        <a class="text-yellow-500 text-2xl hover:pb-4 hover:border-b-4 hover:border-yellow-400"
+                            href="#home">
+                            Home
+                        </a>
+                    </li>
+                    <li class="py-2 lg:py-0 ">
+                        <a class="text-yellow-500 text-2xl hover:pb-4 hover:border-b-4 hover:border-yellow-400"
+                            href="#partners">
+                            Partners
+                        </a>
+                    </li>
+                    <li class="py-2 lg:py-0 ">
+                        <a class="text-yellow-500 text-2xl hover:pb-4 hover:border-b-4 hover:border-yellow-400"
+                            href="#internees">
+                            Internees
+                        </a>
+                    </li>
+                    <li class="py-2 lg:py-0 ">
+                        <a class="text-yellow-500 text-2xl hover:pb-4 hover:border-b-4 hover:border-yellow-400"
+                            href="#about">
+                            About Us
+                        </a>
+                    </li>
+                    <li class="py-2 lg:py-0 ">
+                        <a class="text-yellow-500 text-2xl hover:pb-4 hover:border-b-4 hover:border-yellow-400"
+                            href="#contact">
+                            Contact Us
+                        </a>
+                    </li>
+                    <li class="py-2 lg:py-0 ">
+                        <a class="text-yellow-500 text-2xl hover:pb-4 hover:border-b-4 hover:border-yellow-400"
+                            href="login.html">
+                            Log in
+                        </a>
+                    </li>
+                    <li class="py-2 lg:py-0 ">
+                        <a class="text-yellow-500 text-2xl hover:pb-4 hover:border-b-4 hover:border-yellow-400"
+                            href="signup.html">
+                            Sign up
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </nav>
+    <div class="hero flex flex-col gap-20 w-screen">
+        <div id="home"
+            class="header w-screen h-[95vh] overflow-hidden relative before:block before:absolute before:bg-black before:h-full before:w-full before:top-0 before:left-0 before:z-10 before:opacity-30">
+            <img src="/assets/robot.jpg" class="absolute top-0 left-0 h-full w-full object-cover" alt="">
+            <div class="relative flex z-20 w-full md:w-1/2  h-full items-center">
+                <div class="col-span-6 w-5/6 lg:w-2/3 mx-auto">
+                    <span class="uppercase text-sm font-bold mb-2 block text-slate-400">WE ARE EXPERTS</span>
+                    <h1 class="text-yellow-400 font-extrabold text-3xl lg:text-5xl mb-8">Welcome to ProSensia SkillBot</h1>
+                    <p class="text-white text-sm md:texy-base">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                    <button
+                        class="mt-8 text-slate-700 uppercase py-4 text-base bg-yellow-400  px-10 border border-white hover:bg-yellow-200 hover:scale-125 shadow-yellow-500 hover:shadow-yellow-500 shadow-md transition-all duration-300 font-bold rounded-md hover:rounded-3xl">Get
+                        started</button>
+                </div>
+                <div class="line w-screen h-5 bg-slate-700 absolute bottom-0 z-40"></div>
+            </div>
+        </div>
+        <div id="partners" class="relative min-h-screen w-full flex flex-col pt-36 pb-36 gap-20 justify-center">
+            <div class="heading mx-auto">
+                <h1 class="mb-4 text-3xl font-extrabold text-yellow-300 :text-5xl lg:text-6xl"><span
+                        class="text-transparent bg-clip-text bg-gradient-to-r  from-yellow-500 to-yellow-700">Our
+                        Partners</span></h1>
+            </div>
+            <!-- ====== Brands Section Start -->
+            <section class="w-full flex justify-center">
+
+                <div class="w-5/6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-10">
+
+                    <a href=""
+                        class="flex w-80 lg:w-96 h-40 items-center justify-center rounded-2xl bg-slate-800 p-10 hover:scale-105 transition-all duration-300 hover:shadow-slate-500  hover:shadow-xl">
+
+                        <img src="https://cdn.tailgrids.com/2.2/assets/images/brands/graygrids-white.svg" alt="image"
+                            class="hidden w-full h-full dark:block" />
+
+                    </a>
+                    <a href=""
+                        class="flex w-80 lg:w-96 h-40 items-center justify-center rounded-2xl bg-slate-800 p-10 hover:scale-105 transition-all duration-300 hover:shadow-slate-500  hover:shadow-xl">
+
+                        <img src="https://cdn.tailgrids.com/2.2/assets/images/brands/graygrids-white.svg" alt="image"
+                            class="hidden w-full h-full dark:block" />
+
+                    </a>
+                    <a href=""
+                        class="flex w-80 lg:w-96 h-40 items-center justify-center rounded-2xl bg-slate-800 p-10 hover:scale-105 transition-all duration-300 hover:shadow-slate-500  hover:shadow-xl">
+
+                        <img src="https://cdn.tailgrids.com/2.2/assets/images/brands/graygrids-white.svg" alt="image"
+                            class="hidden w-full h-full dark:block" />
+
+                    </a>
+                    <a href=""
+                        class="flex w-80 lg:w-96 h-40 items-center justify-center rounded-2xl bg-slate-800 p-10 hover:scale-105 transition-all duration-300 hover:shadow-slate-500  hover:shadow-xl">
+
+                        <img src="https://cdn.tailgrids.com/2.2/assets/images/brands/graygrids-white.svg" alt="image"
+                            class="hidden w-full h-full dark:block" />
+
+                    </a>
+                    <a href=""
+                        class="flex w-80 lg:w-96 h-40 items-center justify-center rounded-2xl bg-slate-800 p-10 hover:scale-105 transition-all duration-300 hover:shadow-slate-500  hover:shadow-xl">
+
+                        <img src="https://cdn.tailgrids.com/2.2/assets/images/brands/graygrids-white.svg" alt="image"
+                            class="hidden w-full h-full dark:block" />
+
+                    </a>
+                    <a href=""
+                        class="flex w-80 lg:w-96 h-40 items-center justify-center rounded-2xl bg-slate-800 p-10 hover:scale-105 transition-all duration-300 hover:shadow-slate-500  hover:shadow-xl">
+
+                        <img src="https://cdn.tailgrids.com/2.2/assets/images/brands/graygrids-white.svg" alt="image"
+                            class="hidden w-full h-full dark:block" />
+
+                    </a>
+
+
+
+                </div>
+
+            </section>
+            <div class="line w-screen h-5 bg-slate-700 absolute bottom-0"></div>
+        </div>
+        <div id="internees" class="relative min-h-screen w-full flex flex-col pt-36 gap-20">
+            <div class="heading mx-auto">
+                <h1 class="mb-4 text-3xl font-extrabold text-yellow-300 :text-5xl lg:text-6xl"><span
+                        class="text-transparent bg-clip-text bg-gradient-to-r  from-yellow-500 to-yellow-700">
+                        Our Internees</span></h1>
+            </div>
+            <div class="internees w-full">
+                <!--HTML CODE-->
+                <div class="w-full relative">
+                    <div class="swiper multiple-slide-carousel swiper-container relative w-full">
+                        <div class="swiper-wrapper mb-16 pt-10  w-full mx-auto">
+                            <div class="swiper-slide">
+                                <div
+                                    class="review mx-auto w-2/3 mb-12 bg-slate-900 p-10 rounded-3xl hover:scale-105 transition-all duration-300 hover:shadow-yellow-500  hover:shadow-xl border-2 border-yellow-500">
+                                    <div class="mb-6 flex justify-center">
+                                        <img src="/assets/profile.svg"
+                                            class="w-32 rounded-full shadow-lg dark:shadow-black/30" />
+                                    </div>
+                                    <h5 class="mb-4 text-xl font-semibold text-yellow-500">John Doe</h5>
+                                    <h6 class="mb-4 font-semibold text-slate-300">
+                                        Web Developer
+                                    </h6>
+                                    <p class="mb-4 text-neutral-600 300">
+                                        <span class="inline-block pe-2 [&>svg]:w-5"><svg
+                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                viewBox="0 0 448 512">
+                                                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                <path
+                                                    d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z" />
+                                            </svg>
+                                        </span>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos
+                                        id officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+                                    </p>
+                                    <ul class="mb-0 flex items-center justify-center">
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg clip-rule="evenodd" fill-rule="evenodd" fill="currentColor"
+                                                class="h-5 w-5 text-yellow-500" stroke-linejoin="round"
+                                                stroke-miterlimit="2" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="m11.322 2.923c.126-.259.39-.423.678-.423.289 0 .552.164.678.423.974 1.998 2.65 5.44 2.65 5.44s3.811.524 6.022.829c.403.055.65.396.65.747 0 .19-.072.383-.231.536-1.61 1.538-4.382 4.191-4.382 4.191s.677 3.767 1.069 5.952c.083.462-.275.882-.742.882-.122 0-.244-.029-.355-.089-1.968-1.048-5.359-2.851-5.359-2.851s-3.391 1.803-5.359 2.851c-.111.06-.234.089-.356.089-.465 0-.825-.421-.741-.882.393-2.185 1.07-5.952 1.07-5.952s-2.773-2.653-4.382-4.191c-.16-.153-.232-.346-.232-.535 0-.352.249-.694.651-.748 2.211-.305 6.021-.829 6.021-.829s1.677-3.442 2.65-5.44zm.678 2.033v11.904l4.707 2.505-.951-5.236 3.851-3.662-5.314-.756z"
+                                                    fill-rule="nonzero" />
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div
+                                    class="review mx-auto w-2/3 mb-12 bg-slate-900 p-10 rounded-3xl hover:scale-105 transition-all duration-300 hover:shadow-yellow-500  hover:shadow-xl border-2 border-yellow-500">
+                                    <div class="mb-6 flex justify-center">
+                                        <img src="/assets/profile.svg"
+                                            class="w-32 rounded-full shadow-lg dark:shadow-black/30" />
+                                    </div>
+                                    <h5 class="mb-4 text-xl font-semibold text-yellow-500">John Doe</h5>
+                                    <h6 class="mb-4 font-semibold text-slate-300">
+                                        Web Developer
+                                    </h6>
+                                    <p class="mb-4 text-neutral-600 300">
+                                        <span class="inline-block pe-2 [&>svg]:w-5"><svg
+                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                viewBox="0 0 448 512">
+                                                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                <path
+                                                    d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z" />
+                                            </svg>
+                                        </span>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos
+                                        id officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+                                    </p>
+                                    <ul class="mb-0 flex items-center justify-center">
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg clip-rule="evenodd" fill-rule="evenodd" fill="currentColor"
+                                                class="h-5 w-5 text-yellow-500" stroke-linejoin="round"
+                                                stroke-miterlimit="2" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="m11.322 2.923c.126-.259.39-.423.678-.423.289 0 .552.164.678.423.974 1.998 2.65 5.44 2.65 5.44s3.811.524 6.022.829c.403.055.65.396.65.747 0 .19-.072.383-.231.536-1.61 1.538-4.382 4.191-4.382 4.191s.677 3.767 1.069 5.952c.083.462-.275.882-.742.882-.122 0-.244-.029-.355-.089-1.968-1.048-5.359-2.851-5.359-2.851s-3.391 1.803-5.359 2.851c-.111.06-.234.089-.356.089-.465 0-.825-.421-.741-.882.393-2.185 1.07-5.952 1.07-5.952s-2.773-2.653-4.382-4.191c-.16-.153-.232-.346-.232-.535 0-.352.249-.694.651-.748 2.211-.305 6.021-.829 6.021-.829s1.677-3.442 2.65-5.44zm.678 2.033v11.904l4.707 2.505-.951-5.236 3.851-3.662-5.314-.756z"
+                                                    fill-rule="nonzero" />
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div
+                                    class="review mx-auto w-2/3 mb-12 bg-slate-900 p-10 rounded-3xl hover:scale-105 transition-all duration-300 hover:shadow-yellow-500  hover:shadow-xl border-2 border-yellow-500">
+                                    <div class="mb-6 flex justify-center">
+                                        <img src="/assets/profile.svg"
+                                            class="w-32 rounded-full shadow-lg dark:shadow-black/30" />
+                                    </div>
+                                    <h5 class="mb-4 text-xl font-semibold text-yellow-500">John Doe</h5>
+                                    <h6 class="mb-4 font-semibold text-slate-300">
+                                        Web Developer
+                                    </h6>
+                                    <p class="mb-4 text-neutral-600 300">
+                                        <span class="inline-block pe-2 [&>svg]:w-5"><svg
+                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                viewBox="0 0 448 512">
+                                                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                <path
+                                                    d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z" />
+                                            </svg>
+                                        </span>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos
+                                        id officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+                                    </p>
+                                    <ul class="mb-0 flex items-center justify-center">
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg clip-rule="evenodd" fill-rule="evenodd" fill="currentColor"
+                                                class="h-5 w-5 text-yellow-500" stroke-linejoin="round"
+                                                stroke-miterlimit="2" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="m11.322 2.923c.126-.259.39-.423.678-.423.289 0 .552.164.678.423.974 1.998 2.65 5.44 2.65 5.44s3.811.524 6.022.829c.403.055.65.396.65.747 0 .19-.072.383-.231.536-1.61 1.538-4.382 4.191-4.382 4.191s.677 3.767 1.069 5.952c.083.462-.275.882-.742.882-.122 0-.244-.029-.355-.089-1.968-1.048-5.359-2.851-5.359-2.851s-3.391 1.803-5.359 2.851c-.111.06-.234.089-.356.089-.465 0-.825-.421-.741-.882.393-2.185 1.07-5.952 1.07-5.952s-2.773-2.653-4.382-4.191c-.16-.153-.232-.346-.232-.535 0-.352.249-.694.651-.748 2.211-.305 6.021-.829 6.021-.829s1.677-3.442 2.65-5.44zm.678 2.033v11.904l4.707 2.505-.951-5.236 3.851-3.662-5.314-.756z"
+                                                    fill-rule="nonzero" />
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div
+                                    class="review mx-auto w-2/3 mb-12 bg-slate-900 p-10 rounded-3xl hover:scale-105 transition-all duration-300 hover:shadow-yellow-500  hover:shadow-xl border-2 border-yellow-500">
+                                    <div class="mb-6 flex justify-center">
+                                        <img src="/assets/profile.svg"
+                                            class="w-32 rounded-full shadow-lg dark:shadow-black/30" />
+                                    </div>
+                                    <h5 class="mb-4 text-xl font-semibold text-yellow-500">John Doe</h5>
+                                    <h6 class="mb-4 font-semibold text-slate-300">
+                                        Web Developer
+                                    </h6>
+                                    <p class="mb-4 text-neutral-600 300">
+                                        <span class="inline-block pe-2 [&>svg]:w-5"><svg
+                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                viewBox="0 0 448 512">
+                                                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                <path
+                                                    d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z" />
+                                            </svg>
+                                        </span>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos
+                                        id officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+                                    </p>
+                                    <ul class="mb-0 flex items-center justify-center">
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg clip-rule="evenodd" fill-rule="evenodd" fill="currentColor"
+                                                class="h-5 w-5 text-yellow-500" stroke-linejoin="round"
+                                                stroke-miterlimit="2" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="m11.322 2.923c.126-.259.39-.423.678-.423.289 0 .552.164.678.423.974 1.998 2.65 5.44 2.65 5.44s3.811.524 6.022.829c.403.055.65.396.65.747 0 .19-.072.383-.231.536-1.61 1.538-4.382 4.191-4.382 4.191s.677 3.767 1.069 5.952c.083.462-.275.882-.742.882-.122 0-.244-.029-.355-.089-1.968-1.048-5.359-2.851-5.359-2.851s-3.391 1.803-5.359 2.851c-.111.06-.234.089-.356.089-.465 0-.825-.421-.741-.882.393-2.185 1.07-5.952 1.07-5.952s-2.773-2.653-4.382-4.191c-.16-.153-.232-.346-.232-.535 0-.352.249-.694.651-.748 2.211-.305 6.021-.829 6.021-.829s1.677-3.442 2.65-5.44zm.678 2.033v11.904l4.707 2.505-.951-5.236 3.851-3.662-5.314-.756z"
+                                                    fill-rule="nonzero" />
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div
+                                    class="review mx-auto w-2/3 mb-12 bg-slate-900 p-10 rounded-3xl hover:scale-105 transition-all duration-300 hover:shadow-yellow-500  hover:shadow-xl border-2 border-yellow-500">
+                                    <div class="mb-6 flex justify-center">
+                                        <img src="/assets/profile.svg"
+                                            class="w-32 rounded-full shadow-lg dark:shadow-black/30" />
+                                    </div>
+                                    <h5 class="mb-4 text-xl font-semibold text-yellow-500">John Doe</h5>
+                                    <h6 class="mb-4 font-semibold text-slate-300">
+                                        Web Developer
+                                    </h6>
+                                    <p class="mb-4 text-neutral-600 300">
+                                        <span class="inline-block pe-2 [&>svg]:w-5"><svg
+                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                viewBox="0 0 448 512">
+                                                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                <path
+                                                    d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z" />
+                                            </svg>
+                                        </span>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos
+                                        id officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+                                    </p>
+                                    <ul class="mb-0 flex items-center justify-center">
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="h-5 w-5 text-yellow-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg clip-rule="evenodd" fill-rule="evenodd" fill="currentColor"
+                                                class="h-5 w-5 text-yellow-500" stroke-linejoin="round"
+                                                stroke-miterlimit="2" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="m11.322 2.923c.126-.259.39-.423.678-.423.289 0 .552.164.678.423.974 1.998 2.65 5.44 2.65 5.44s3.811.524 6.022.829c.403.055.65.396.65.747 0 .19-.072.383-.231.536-1.61 1.538-4.382 4.191-4.382 4.191s.677 3.767 1.069 5.952c.083.462-.275.882-.742.882-.122 0-.244-.029-.355-.089-1.968-1.048-5.359-2.851-5.359-2.851s-3.391 1.803-5.359 2.851c-.111.06-.234.089-.356.089-.465 0-.825-.421-.741-.882.393-2.185 1.07-5.952 1.07-5.952s-2.773-2.653-4.382-4.191c-.16-.153-.232-.346-.232-.535 0-.352.249-.694.651-.748 2.211-.305 6.021-.829 6.021-.829s1.677-3.442 2.65-5.44zm.678 2.033v11.904l4.707 2.505-.951-5.236 3.851-3.662-5.314-.756z"
+                                                    fill-rule="nonzero" />
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="absolute flex justify-center items-center m-auto left-0 right-0 w-fit bottom-12">
+                            <button id="slider-button-left"
+                                class="prev group !p-2 flex justify-center items-center border border-solid border-yellow-600 !w-12 !h-12 transition-all duration-200 rounded-full  hover:bg-yellow-600 !-translate-x-16"
+                                data-carousel-prev>
+                                <svg class="h-5 w-5 text-yellow-600 group-hover:text-white"
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none">
+                                    <path d="M10.0002 11.9999L6 7.99971L10.0025 3.99719" stroke="currentColor"
+                                        stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
+                            <button id="slider-button-right"
+                                class="next group !p-2 flex justify-center items-center border border-solid border-yellow-600 !w-12 !h-12 transition-all duration-200 rounded-full hover:bg-yellow-600 !translate-x-16"
+                                data-carousel-next>
+                                <svg class="h-5 w-5 text-yellow-600 group-hover:text-white"
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none">
+                                    <path d="M5.99984 4.00012L10 8.00029L5.99748 12.0028" stroke="currentColor"
+                                        stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="line w-screen h-5 bg-slate-700 absolute bottom-0"></div>
+            </div>
+        </div>
+        <div id="about" class="relative min-h-screen w-full flex flex-col pt-36 gap-20">
+            <div class="heading mx-auto">
+                <h1 class="mb-4 text-3xl font-extrabold text-yellow-300 :text-5xl lg:text-6xl">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r  from-yellow-500 to-yellow-700">
+                        About Us</span>
+                </h1>
+            </div>
+            <div class="min-h-[80vh] sm:flex items-center justify-around w-full">
+                <div class="sm:w-1/3 p-10">
+                    <div class="image object-center text-center">
+                        <img src="/assets/about.jpg">
+                    </div>
+                </div>
+                <div class="sm:w-1/3 p-5">
+                    <div class="text">
+
+                        <h2 class="my-4 font-bold text-3xl  sm:text-4xl text-yellow-500">About <span
+                                class="text-white">Our Company</span>
+                        </h2>
+                        <p class="text-white text-justify">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi
+                            doloremque, fugiat illum magni minus nisi nulla numquam obcaecati placeat quia, repellat
+                            tempore
+                            voluptatum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="heading mx-auto">
+                <h1 class="mb-4 text-3xl font-extrabold text-yellow-300 :text-5xl lg:text-6xl">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r  from-yellow-500 to-yellow-700">
+                        Our Start-Ups</span>
+                </h1>
+            </div>
+            <div class="main mx-auto">
+                <div class="card">
+                    <div class="top-section">
+                        <div class="bordercard"></div>
+
+                        <div class="icons">
+                            <div class="logo">
+                                <img src="/assets/logo.png" alt="">
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="bottom-section">
+                        <span class="title">ProSensia CustomTech</span>
+                        <div class="row row1">
+                            <div class="big-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
+                                assumenda illum ipsa ea non in. Ut quas vel eius error, non iusto dignissimos.</div>
+                        </div>
+                        <div class="buttons">
+                            <a style="--clr: #7808d0" class="button" href="#">
+                                <span class="button__icon-wrapper">
+                                    <svg width="10" class="button__icon-svg" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 14 15">
+                                        <path fill="currentColor"
+                                            d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z">
+                                        </path>
+                                    </svg>
+
+                                    <svg class="button__icon-svg  button__icon-svg--copy"
+                                        xmlns="http://www.w3.org/2000/svg" width="10" fill="none" viewBox="0 0 14 15">
+                                        <path fill="currentColor"
+                                            d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                Explore
+                            </a>
+                            <a style="--clr: #7808d0" class="button" href="#">
+
+                                Login
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="top-section">
+                        <div class="bordercard"></div>
+
+                        <div class="icons">
+                            <div class="logo">
+                                <img src="/assets/logo.png" alt="">
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="bottom-section">
+                        <span class="title">ProSensia CustomTech</span>
+                        <div class="row row1">
+                            <div class="big-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
+                                assumenda illum ipsa ea non in. Ut quas vel eius error, non iusto dignissimos.</div>
+                        </div>
+                        <div class="buttons">
+                            <a style="--clr: #7808d0" class="button" href="#">
+                                <span class="button__icon-wrapper">
+                                    <svg width="10" class="button__icon-svg" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 14 15">
+                                        <path fill="currentColor"
+                                            d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z">
+                                        </path>
+                                    </svg>
+
+                                    <svg class="button__icon-svg  button__icon-svg--copy"
+                                        xmlns="http://www.w3.org/2000/svg" width="10" fill="none" viewBox="0 0 14 15">
+                                        <path fill="currentColor"
+                                            d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                Explore
+                            </a>
+                            <a style="--clr: #7808d0" class="button" href="#">
+
+                                Login
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="card">
+                    <div class="top-section">
+                        <div class="bordercard"></div>
+
+                        <div class="icons">
+                            <div class="logo">
+                                <img src="/assets/logo.png" alt="">
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="bottom-section">
+                        <span class="title">ProSensia CustomTech</span>
+                        <div class="row row1">
+                            <div class="big-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
+                                assumenda illum ipsa ea non in. Ut quas vel eius error, non iusto dignissimos.</div>
+                        </div>
+                        <div class="buttons">
+                            <a style="--clr: #7808d0" class="button" href="#">
+                                <span class="button__icon-wrapper">
+                                    <svg width="10" class="button__icon-svg" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 14 15">
+                                        <path fill="currentColor"
+                                            d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z">
+                                        </path>
+                                    </svg>
+
+                                    <svg class="button__icon-svg  button__icon-svg--copy"
+                                        xmlns="http://www.w3.org/2000/svg" width="10" fill="none" viewBox="0 0 14 15">
+                                        <path fill="currentColor"
+                                            d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                Explore
+                            </a>
+                            <a style="--clr: #7808d0" class="button" href="#">
+
+                                Login
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="heading mx-auto">
+                <h1 class="mb-4 text-3xl font-extrabold text-yellow-300 :text-5xl lg:text-6xl">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r  from-yellow-500 to-yellow-700">
+                        Our team</span>
+                </h1>
+            </div>
+            <section class="py-24 min-h-[80vh]">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div class="flex justify-between items-center flex-col lg:flex-row md:mt-20">
+                        <div class="w-5/6 lg:w-1/2">
+                            <h2 class="my-4 font-bold text-2xl  sm:text-4xl text-yellow-500 w-full">Brains <span
+                                    class="text-white">Behind Our Company</span>
+                            </h2>
+                            <p class="text-lg text-gray-300 mb-16 text-center lg:text-left">These people work on making
+                                our
+                                product best.</p>
+                            <button
+                                class="cursor-pointer py-3 px-8 w-60 bg-yellow-600 text-white hover:text-slate-600 text-base font-semibold transition-all duration-200 block text-center rounded-full hover:bg-yellow-300 mx-auto lg:mx-0">Join
+                                our team</button>
+                        </div>
+                        <div class="w-full lg:w-1/2 lg:mt-0 md:mt-40 mt-16 max-lg:max-w-2xl">
+                            <div class="grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 gap-8">
+                                <img src="/assets/download.jpeg" alt="Team tailwind section"
+                                    class="w-44 h-56 rounded-2xl object-cover md:mt-20 mx-auto min-[450px]:mr-0" />
+                                <img src="/assets/download.jpeg" alt="Team tailwind section"
+                                    class="w-44 h-56 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mx-auto" />
+                                <img src="/assets/download.jpeg" alt="Team tailwind section"
+                                    class="w-44 h-56 rounded-2xl object-cover md:mt-20 mx-auto min-[450px]:mr-0 md:ml-0" />
+                                <img src="/assets/download.jpeg" alt="Team tailwind section"
+                                    class="w-44 h-56 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mr-0 md:ml-auto" />
+                                <img src="/assets/download.jpeg" alt="Team tailwind section"
+                                    class="w-44 h-56 rounded-2xl object-cover md:-mt-20 mx-auto min-[450px]:mr-0 md:mx-auto" />
+                                <img src="/assets/download.jpeg" alt="Team tailwind section"
+                                    class="w-44 h-56 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mr-0" />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <div class="line w-screen h-5 bg-slate-700 absolute bottom-0"></div>
+        </div>
+        <div id="contact" class="relative min-h-screen w-full flex flex-col pt-36 gap-20">
+            <div class="heading mx-auto">
+                <h1 class="mb-4 text-3xl font-extrabold text-yellow-300 :text-5xl lg:text-6xl">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r  from-yellow-500 to-yellow-700">
+                        Contact Us</span>
+                </h1>
+            </div>
+            <section class="">
+                <div class="py-8 lg:py-16 px-4 mx-auto w-5/6">
+
+                    <p class="mb-8 lg:mb-16 font-light text-center text-slate-300  sm:text-xl">Got a technical issue?
+                        Want to send feedback about a beta feature? Need details about our Business plan? Let us know.
+                    </p>
+                    <form action="#" class="space-y-8">
+                        <div>
+                            <label for="email" class="block mb-2 text-sm font-medium text-yellow-600 ">Your
+                                email</label>
+                            <input type="email" id="email"
+                                class="shadow-sm bg-gray-50 border border-gray-300 text-yellow-600 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 rk:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                                placeholder="" required>
+                        </div>
+                        <div>
+                            <label for="subject" class="block mb-2 text-sm font-medium text-yellow-600 ">Subject</label>
+                            <input type="text" id="subject"
+                                class="block p-3 w-full text-sm text-yellow-600 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 rk:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                                placeholder="Let us know how we can help you" required>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label for="message" class="block mb-2 text-sm font-medium text-yellow-600 ">Your
+                                message</label>
+                            <textarea id="message" rows="6"
+                                class="block p-2.5 w-full text-sm text-yellow-600 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 rk:focus:ring-primary-500 dark:focus:border-primary-500"
+                                placeholder="Leave a comment..."></textarea>
+                        </div>
+                        <button type="submit"
+                            class="py-3 px-5 text-sm font-medium text-center text-slate-700 rounded-lg sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 bg-yellow-600 hover:bg-yellow-400 dark:focus:ring-primary-800 transition-all duration-200">Send
+                            message</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <div id="footer">
+
+
+            <footer class="bg-white dark:bg-gray-900 w-screen ">
+                <div class="mx-auto w-11/12  p-4 py-6 lg:py-8">
+                    <div class="md:flex md:justify-between">
+                        <div class="mb-6 md:mb-0">
+                            <a href="" class="flex items-center">
+                                <img src="/assets/logo2.png" class="h-8 me-3" alt=" Logo" />
+                                <span
+                                    class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">ProSensia</span>
+                            </a>
+                        </div>
+                        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                            <div>
+                                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources
+                                </h2>
+                                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                    <li class="mb-4">
+                                        <a href="https://flowbite.com/" class="hover:underline">ProSensia</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div>
+                                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us
+                                </h2>
+                                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                    <li class="mb-4">
+                                        <a href="https://github.com/" class="hover:underline ">Github</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://discord.gg/" class="hover:underline">Discord</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal
+                                </h2>
+                                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                    <li class="mb-4">
+                                        <a href="#" class="hover:underline">Privacy Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                    <div class="sm:flex sm:items-center sm:justify-between">
+                        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a
+                                href="https://flowbite.com/" class="hover:underline">ProSensia™</a>. All Rights
+                            Reserved.
+                        </span>
+                        <div class="flex mt-4 sm:justify-center sm:mt-0">
+                            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 8 19">
+                                    <path fill-rule="evenodd"
+                                        d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="sr-only">Facebook page</span>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 21 16">
+                                    <path
+                                        d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
+                                </svg>
+                                <span class="sr-only">Discord community</span>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 20 17">
+                                    <path fill-rule="evenodd"
+                                        d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="sr-only">Twitter page</span>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="sr-only">GitHub account</span>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="sr-only">Dribbble account</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const swiper = new Swiper(".multiple-slide-carousel", {
+                    loop: true,
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                    navigation: {
+                        nextEl: ".multiple-slide-carousel .next",
+                        prevEl: ".multiple-slide-carousel .prev",
+                    },
+                    breakpoints: {
+                        1920: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        },
+                        1028: {
+                            slidesPerView: 2,
+                            spaceBetween: 30
+                        },
+                        0: {
+                            slidesPerView: 1,
+                            spaceBetween: 0
+                        }
+                    }
+                });
+            });
+
+        </script>
+</body>
+
+</html>
