@@ -5,70 +5,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        .dropdown:focus-within .dropdown-menu {
+            opacity: 1;
+            transform: translate(0) scale(1);
+            visibility: visible;
+        }
+
+        /* Add this to your CSS file or within a <style> tag */
+        #side-panel-container {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #side-panel-container.hidden {
+            transform: translateX(-100%);
+        }
+
+        .arrow img.rotate-180 {
+            transform: rotate(180deg);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .arrow img.rotate-0 {
+            transform: rotate(0deg);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
 </head>
 
 <body class="flex h-screen">
-    <div id="side-panel-container" class="w-1/5">
-        <div class=" sidepanel w-full bg-gray-800 h-full flex flex-col justify-center">
+    <div id="side-panel-container" class="w-1/5 relative h-full">
+        <div class="sidepanel w-full bg-gray-800 h-full flex flex-col justify-center">
             <div class="w-full py-4 h-1/6 flex justify-center items-center overflow-hidden">
                 <img src="/assets/logo.png" alt="Logo" class="h-full w-full mx-auto object-cover">
             </div>
 
             <div class=" text-white flex flex-col gap-1w-14 justify-evenly h-5/6">
-                <ul class="w-full mt-6 flex flex-col gap-2">
-                    <li class="w-full px-14 hover:bg-gray-600  flex gap-4 " data-target="profile-view"
-                        data-class="hidden">
-                        <img src="/assets/profile.svg" alt="">
-                        <a href="index.html" class="block py-2 ">Profile</a>
-                    </li>
+                <div class="w-full mt-6 flex flex-col gap-2">
+                    <a href="index.html" class="w-full hover:bg-gray-600">
+                        <div class="flex gap-4 px-14">
+                            <img src="/assets/profile.svg" alt="">
+                            <span class="block py-2">Profile</span>
+                        </div>
+                    </a>
+                    <a href="Courses.html" class="w-full hover:bg-gray-600">
+                        <div class="flex gap-4 px-14">
+                            <img src="/assets/courses.svg" alt="">
+                            <span class="block py-2">Courses</span>
+                        </div>
+                    </a>
+                    <a href="Assessments.html" class="w-full hover:bg-gray-600">
+                        <div class="flex gap-4 px-14 ">
+                            <img src="/assets/assessment.svg" alt="">
+                            <span class="block py-2">Assessments</span>
+                        </div>
+                    </a>
+                    <a href="Projects.html" class="w-full hover:bg-gray-600">
+                        <div class="flex gap-4 px-14">
+                            <img src="/assets/project.svg" alt="">
+                            <span class="block py-2">Projects</span>
+                        </div>
+                    </a>
+                    <a href="Connect.html" class="w-full hover:bg-gray-600">
+                        <div class="flex gap-4 px-14">
+                            <img src="/assets/connect.svg" alt="">
+                            <span class="block py-2">Connect</span>
+                        </div>
+                    </a>
+                    <a href="Teams.html" class="w-full hover:bg-gray-600">
+                        <div class="flex gap-4 px-14">
+                            <img src="/assets/teams.svg" alt="">
+                            <span class="block py-2">Teams</span>
+                        </div>
+                    </a>
+                </div>
 
-                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4"><img src="/assets/courses.svg" alt=""><a
-                            href="Courses.html" class="block py-2">Courses</a></li>
-                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4 toggle-button"><img src="/assets/assessment.svg"
-                            alt=""><a href="Assessments.html" class="block py-2">Assessments</a>
-                    </li>
-                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4 toggle-button"><img src="/assets/project.svg"
-                            alt=""><a href="Projects.html" class="block py-2">Projects</a></li>
-                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4 toggle-button"><img src="/assets/connect.svg"
-                            alt=""><a href="Connect.html" class="block py-2">Connect</a></li>
-                    <li class="w-full px-14 hover:bg-gray-600 flex gap-4 toggle-button"><img src="/assets/teams.svg"
-                            alt=""><a href="Teams.html" class="block py-2">Teams</a></li>
-                    </ul>
                 <ul class="text-white">
-                    <li class="w-full px-14 hover:bg-gray-600"><a href="#help" class="block py-2 ">Help</a></li>
-                    <li class="w-full px-14 hover:bg-gray-600"><a href="#logout" class="block py-2 ">Logout</a></li>
+                    <li class="w-full px-14 hover:text-white text-slate-400"><a href="#help"
+                            class="block py-2 ">Help</a></li>
+                    <li class="w-full px-14 hover:text-white text-slate-400"><a href="#logout"
+                            class="block py-2 ">Logout</a></li>
                 </ul>
             </div>
         </div>
+
     </div>
 
-    <div class="w-4/5 max-h-full overflow-auto flex flex-col items-center gap-10">
+    <div id="main" class="w-4/5 h-full overflow-auto flex flex-col items-center gap-10">
         <div
-            class="herotoppane h-1/6 w-full bg-yellow-400 text-gray-800 flex-shrink-0 flex items-center p-4 sticky top-0 z-30">
-            <div class="flex gap-2">
-                <button class="w-10 h-10 border-2 rounded-full bg-white flex items-center justify-center"><img
-                        src="/assets/back.svg" alt=""></button>
-                <button
-                    class="w-10 h-10 border-2 rounded-full bg-white flex items-center justify-center rotate-180"><img
-                        src="/assets/back.svg" alt=""></button>
+            class="herotoppane h-1/6 w-full bg-yellow-400 text-end0 text-gray-800 flex-shrink-0 flex items-center p-4 sticky top-0 z-30 relative">
+            <div id="toggle-arrow"
+                class="arrow absolute w-7 h-10 bg-slate-800 rounded-r-full left-0 bottom-0 flex items-center justify-center">
+                <img id="arrowIcon" src="/assets/back.svg" class="" alt="" onclick="">
             </div>
-            <div class="font-bold text-3xl text-gray-600 ml-10">Welcome To ProSensia</div>
+            <div class="flex w-11/12 mx-auto justify-between">
+                <div class="flex items-center">
+
+                    <div class="flex gap-2 items-center">
+                        <button
+                            class="w-8 h-8 rounded-full bg-yellow-700 flex items-center justify-center hover:scale-125 duration-150"><img
+                                src="/assets/back.svg" alt=""></button>
+                        <button
+                            class="w-8 h-8 rounded-full bg-yellow-700 flex items-center justify-center rotate-180 hover:scale-125 duration-150"><img
+                                src="/assets/back.svg" alt=""></button>
+                    </div>
+                    <div
+                        class="font-bold text-4xl text-transparent bg-clip-text bg-gradient-to-r  from-slate-500 to-sky-500 ml-10 font-poppins text-end">
+                        <span class="font-bold text-4xl font-lato text-slate-700"> ProSensia:</span> Discover, Learn,
+                        Succeed
+                    </div>
+                </div>
+                <div class="h-12 w-12 relative hover:scale-125 duration-150 dropdown toggle-button" data-class="hidden"
+                    data-target="dropdown-menu" type="button" aria-haspopup="true" aria-expanded="true"
+                    aria-controls="headlessui-menu-items-117">
+                    <img class="h-full w-full" src="/assets/notifi.svg" alt="">
+                    <div
+                        class="bg-red-600 h-4 w-4 text-xs absolute rounded-full right-0 font-bold top-0 text-center text-white">
+                        1</div>
+                </div>
+
+                <div id="dropdown-menu"
+                    class="hidden dropdown-menu border-2 absolute right-16 top-24 min-w-56 mt-2 origin-top-right bg-white  border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none transition-all duration-500 ease-out transform -translate-y-10 opacity-0"
+                    aria-labelledby="headlessui-menu-button-1" role="menu">
+                    <div class="flex justify-between py-6 px-4 bg-white/30 rounded-lg">
+                        <div class="flex items-center space-x-4">
+                            <img src="/assets/notifi.svg" class="rounded-full h-14 w-14 text-black" alt="">
+                            <div class="flex flex-col space-y-1">
+                                <span class="font-bold">New Assignment</span>
+                                <span class="text-sm">Make a basic HTML page</span>
+                            </div>
+                        </div>
+                        <div class="flex-none px-4 py-2 text-stone-600 text-xs md:text-sm">
+                            17m ago
+                        </div>
+                    </div>
+                    <div class="flex justify-between py-6 px-4 bg-white/30 rounded-lg">
+                        <div class="flex items-center space-x-4">
+                            <img src="/assets/notifi.svg" class="rounded-full h-14 w-14 text-black" alt="">
+                            <div class="flex flex-col space-y-1">
+                                <span class="font-bold">New Assignment</span>
+                                <span class="text-sm">Make a basic HTML page</span>
+                            </div>
+                        </div>
+                        <div class="flex-none px-4 py-2 text-stone-600 text-xs md:text-sm">
+                            17m ago
+                        </div>
+                    </div>
+                    <div class="flex justify-between py-6 px-4 bg-white/30 rounded-lg">
+                        <div class="flex items-center space-x-4">
+                            <img src="/assets/notifi.svg" class="rounded-full h-14 w-14 text-black" alt="">
+                            <div class="flex flex-col space-y-1">
+                                <span class="font-bold">New Assignment</span>
+                                <span class="text-sm">Make a basic HTML page</span>
+                            </div>
+                        </div>
+                        <div class="flex-none px-4 py-2 text-stone-600 text-xs md:text-sm">
+                            17m ago
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <div id="profile-view"
-            class="hero-section bg-white p-6 rounded-lg shadow-gray-800 shadow-md w-11/12 flex flex-col gap-16 justify-center items-center">
+            class="hero-section bg-white p-8 rounded-lg shadow-gray-800 shadow-md w-11/12 flex flex-col gap-16 items-center mb-10">
             <div class="flex justify-between w-full">
                 <div class="text-2xl text-gray-800 font-bold ">Profile Information</div>
                 <a href="addprofile.html"><button
-                        class="h-10 w-20 bg-gray-700 rounded-2xl text-white font-bold text-center mr-0 "
+                        class="h-10 w-20  rounded-2xl text-black font-bold text-center mr-0 bg-yellow-500 hover:scale-125 duration-200"
                         data-target="profile-form" data-class="hidden">EDIT</button></a>
 
             </div>
             <div class="flex justify-between w-full">
 
                 <div class="about flex flex-col gap-7 w-2/3">
-                    <div class="text-4xl font-bold">Zain Kazmi</div>
-                    <p class="description text-lg">Hi! I am Zain an enthusiast thriving to work and dive in the ocean of
+                    <div class="text-4xl font-bold font-poppins text-yellow-600">Syed Zain Kazmi</div>
+                    <p class="description text-lg font-lato font-semibold">Hi! I am Zain an enthusiast thriving to work
+                        and dive in the ocean of
                         endless opportunities. My nature always compels me to achieve milestones which keeps me to the
                         path of success
                     </p>
@@ -79,23 +198,23 @@
             </div>
             <div class="details w-full flex justify-between">
                 <div
-                    class="w-1/2 shadow-md shadow-gray-700 border-2 border-gray-700  rounded-xl flex flex-col gap-2 items-center justify-center p-2">
-                    <ul class="text-xl font-semibold w-4/5 ">
-                        <li class="flex justify-between items-center">
+                    class="w-1/2 shadow-md shadow-gray-700 border-2 border-gray-700 bg-yellow-300  rounded-xl flex flex-col gap-2 items-center justify-center p-2">
+                    <ul class="text-xl font-semibold w-11/12 ">
+                        <li class="flex justify-between">
                             <span>Email :</span>
-                            <span id="email">zainkazmi258@gmail.com</span>
+                            <span class="w-72 text-end " id="email">zainkazmi258@gmail.com</span>
                         </li>
-                        <li class="flex justify-between items-center">
+                        <li class="flex justify-between">
                             <span>Phone :</span>
-                            <span id="phone">03354055473</span>
+                            <span class="w-72 text-end" id="phone">03354055473</span>
                         </li>
-                        <li class="flex justify-between items-center">
+                        <li class="flex justify-between">
                             <span>University :</span>
-                            <span id="university">PAFIAST</span>
+                            <span class="w-72 text-end" id="university">Lorem ipsum dolor sit amet consectetur.</span>
                         </li>
-                        <li class="flex justify-between items-center">
+                        <li class="flex justify-between">
                             <span>CGPA :</span>
-                            <span id="cgpa">3.94</span>
+                            <span class="w-72 text-end" id="cgpa">3.94</span>
                         </li>
                     </ul>
                 </div>
@@ -124,13 +243,13 @@
                 </div>
                 <div class="attendance flex items-center">
                     <span class="text-lg font-bold mr-2">Attendance:</span>
-                    <div class="w-40 bg-gray-300 rounded-full h-5">
+                    <div class="w-72 text-end bg-gray-300 rounded-full h-5">
                         <div class="bg-yellow-500 h-5 rounded-full" style="width: 85%;"></div>
                     </div>
                     <span class="ml-2 text-lg font-bold">85%</span>
                 </div>
                 <div>
-                    <span class="text-lg font-bold mr-2">Experience:</span>
+                    <span class="text-lg font-bold mr-2 ">Experience:</span>
                     <span class="font-semibold">0.5 YEARS</span>
                 </div>
             </div>
@@ -138,7 +257,58 @@
         </div>
     </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let buttons = document.querySelectorAll(".toggle-button");
+            Array.from(buttons).forEach(e => {
+                e.addEventListener("click", () => {
+                    let menu = document.getElementById(e.getAttribute('data-target'));
+                    if (menu) {
+                        if (menu.classList.contains('hidden')) {
+                            menu.classList.remove('hidden');
+                            setTimeout(() => {
+                                menu.classList.remove('opacity-0', '-translate-y-10');
+                            }, 10); // Slight delay to allow transition
+                        } else {
+                            menu.classList.add('opacity-0', '-translate-y-10');
+                            setTimeout(() => {
+                                menu.classList.add('hidden');
+                            }, 500); // Duration should match the transition duration
+                        }
+                    }
+                });
+            });
+            const sidePanel = document.getElementById("side-panel-container");
+            const toggleArrow = document.getElementById("toggle-arrow");
+            const arrowIcon = toggleArrow.querySelector("img");
+            const main = document.getElementById("main")
 
+
+            toggleArrow.addEventListener("click", () => {
+                sidePanel.classList.toggle("hidden");
+                if (sidePanel.classList.contains("hidden")) {
+                    arrowIcon.classList.remove("rotate-0");
+                    arrowIcon.classList.add("rotate-180");
+                } else {
+                    arrowIcon.classList.remove("rotate-180");
+                    arrowIcon.classList.add("rotate-0");
+                }
+
+                if(main.classList.contains("w-4/5")){
+                    main.classList.remove("w-4/5");
+                    main.classList.add("w-full");
+                }
+                else{
+                    main.classList.remove("w-full");
+                    main.classList.add("w-4/5");
+                }
+
+
+
+            });
+        });
+
+    </script>
     <script src="script.js"></script>
 </body>
 
