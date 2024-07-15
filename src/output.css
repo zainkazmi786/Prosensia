@@ -1819,6 +1819,11 @@ video {
   background-color: rgb(161 98 7 / var(--tw-bg-opacity));
 }
 
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\/assets\/c1\.png\'\)\] {
   background-image: url('/assets/c1.png');
 }
@@ -2564,7 +2569,6 @@ video {
 ::-webkit-scrollbar {
   width: 0.5rem;
   height: 0.5rem;
-  /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
