@@ -993,8 +993,8 @@ video {
   height: 1.5rem;
 }
 
-.h-72 {
-  height: 18rem;
+.h-60 {
+  height: 15rem;
 }
 
 .h-8 {
@@ -2563,6 +2563,7 @@ video {
 
 ::-webkit-scrollbar {
   width: 0.5rem;
+  height: 0.5rem;
   /* Width of the scrollbar */
 }
 
@@ -3399,11 +3400,6 @@ video {
   .dark\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-yellow-300 {
-    --tw-text-opacity: 1;
-    color: rgb(253 224 71 / var(--tw-text-opacity));
   }
 
   .dark\:placeholder-gray-400::-moz-placeholder {
